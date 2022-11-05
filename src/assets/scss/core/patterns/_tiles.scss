@@ -40,12 +40,14 @@
 }
 
 .tiles-item-inner {
+	cursor: pointer;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	height: 100%;
 	padding: $tiles-item--inner-padding-v $tiles-item--inner-padding-h;
 }
+
 
 @if ( $tiles-items--padding__desktop != null ) {
 

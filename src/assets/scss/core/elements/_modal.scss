@@ -15,13 +15,6 @@
 	position: fixed;
 	z-index: 40;
 
-	&.modal-video {
-
-		.modal-inner {
-			padding: 0;
-			max-width: $modal-video--max-width;
-		}
-	}
 
 	&::before,
 	.modal-inner  {
@@ -55,7 +48,7 @@
 .modal-inner {
 	max-height: calc(100vh - #{$modal--outer-padding-v__mobile} * 2);
 	overflow: auto;
-	position: relative;
+	position: absolute;
 	width: calc(100%  - ( #{$container--padding__mobile} * 2 ));
 	min-width: $modal--min-width;
 	max-width: $modal--max-width;

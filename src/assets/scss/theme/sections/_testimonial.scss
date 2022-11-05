@@ -1,8 +1,14 @@
 .testimonial {
 
 	.tiles-item-inner {
-		background: get-color(dark, 2);		
+		background: get-color(light, 0.5);
+        transition: all 0.25s;
 	}
+
+    .tiles-item-inner:hover {
+        background-color: get-color(light, 1);
+    }
+    
 }
 
 .testimonial-item-content {
