@@ -5,7 +5,9 @@ import FeaturesTiles from "../components/sections/FeaturesTiles";
 import FeaturesSplit from "../components/sections/FeaturesSplit";
 import Testimonial from "../components/sections/Testimonial";
 import Promotion from "../components/sections/Promotion";
-import Cta from "../components/sections/Cta";
+import Feedback from "../components/sections/Feedback";
+import Question from "../components/sections/Question";
+import Order from "../components/sections/Order";
 
 const Home = () => {
   return (
@@ -19,8 +21,9 @@ const Home = () => {
         className="illustration-section-02"
       />
       <Testimonial topDivider />
+      <Question />
+      <Feedback />
       <Promotion />
-      <Cta split />
     </>
   );
 };

@@ -1,6 +1,9 @@
 .testimonial {
-
+    img {
+        border-radius: 12px;
+    }
 	.tiles-item-inner {
+        border-radius: 12px;
 		background: get-color(light, 0.5);
         transition: all 0.25s;
 	}
@@ -8,6 +11,21 @@
     .tiles-item-inner:hover {
         background-color: get-color(light, 1);
     }
+    
+}
+
+.feedback {
+    .testimonial-item-content {
+        flex-grow: 0;
+    }
+    img {
+        border-radius: 12px;
+    }
+	.tiles-item-inner {
+        border-radius: 12px;
+		background: get-color(light, 0.5);
+        transition: all 0.25s;
+	}
     
 }
 

@@ -7,13 +7,23 @@
 }
 
 .cta-inner {
-	padding-left: 16px;
-	padding-right: 16px;
+	padding: 16px !important;
     background-color: get-color(primary, 3);
 	background-image: url(../../../images/cta-illustration.svg);
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;    
+}
+
+.question-content {
+    margin: 0px 0px 0px 0px;
+    padding: 16px 16px 16px 16px;
+    border-radius: 12px 12px 12px 12px;
+    border-style: dashed;
+    border-width: 2px 2px 2px 2px;
+    border-color: #f7941e;
+    box-shadow: 0px 6px 16px -10px rgb(188 95 0 / 50%);
+    height: fit-content;
 }
 
 @include media( '>medium' ) {

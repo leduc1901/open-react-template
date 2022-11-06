@@ -13,7 +13,28 @@
 }
 
 .site-footer-inner {
+	display: flex;
 	padding: $footer--padding__mobile 0;
+
+	.footer-item {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	
+
+	.site-footer-inner {
+		flex-direction: column;
+
+		.footer-item {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			align-items: flex-start;
+		}
+	}
 }
 
 .footer-top {
@@ -168,7 +189,6 @@
 			padding: $footer--padding__desktop 0;
 		}
 	}
-
 	.footer-top,
 	.footer-bottom {
 

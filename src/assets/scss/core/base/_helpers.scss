@@ -67,8 +67,20 @@
 	color: color(primary);
 }
 
+.bg-color-primary {
+	background-color: color(primary);
+}
+
 .text-color-secondary {
 	color: color(secondary);
+}
+
+.text-black {
+	color: black;
+}
+
+.text-white {
+	color: white;
 }
 
 .text-color-error {
@@ -627,6 +639,14 @@ img.has-shadow {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.question-image {
+		display: none;
+	}
+	.inner-container {
+		justify-content: center !important;
+	}
+}
 
 
 /*Right Side Buttons Start*/
@@ -682,4 +702,21 @@ float:left;
 /*Right Side Buttons End*/
 
 
-  
+.input-form {
+	padding: 8px;
+	font-size: 16px;
+	color: black;
+	border-radius: 4px;
+	border: 1px solid black;
+}
+
+.inner-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.question-image {
+		width: 50%;
+		flex-shrink: 0;
+	}
+}
+
