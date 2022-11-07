@@ -720,3 +720,14 @@ float:left;
 	}
 }
 
+
+.choice-item {
+	max-width: 100% !important;
+	margin-bottom: 20px;
+	flex-basis: auto !important;
+	background-color: #FFFFFF;
+    border-style: dashed;
+    border-width: 1px 1px 1px 1px;
+    border-color: #FCD09B;
+    border-radius: 60px 60px 60px 60px;
+}

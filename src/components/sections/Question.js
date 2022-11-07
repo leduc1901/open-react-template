@@ -5,6 +5,11 @@ import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import Button from "../elements/Button";
 
+const FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSf9SeXxLoV_Z1zEbEeR824TX29J6tD-eUvveFblV8YAe9o96w/formResponse";
+const NAME_ID = "entry.87652394";
+const PHONE_ID = "entry.258401120";
+
 const propTypes = {
   ...SectionProps.types,
   split: PropTypes.bool,
@@ -26,8 +31,6 @@ const Question = ({
   split,
   ...props
 }) => {
-  const [submitted, setSubmitted] = useState(false);
-
   const outerClasses = classNames(
     "section center-content-mobile reveal-from-bottom",
     topOuterDivider && "has-top-divider",
@@ -43,6 +46,27 @@ const Question = ({
     bottomDivider && "has-bottom-divider",
     split && "cta-split"
   );
+
+  const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const onSubmit = () => {
+    if (!name || !phone) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+    } else {
+      const formData = new FormData();
+      formData.append(NAME_ID, name);
+      formData.append(PHONE_ID, phone);
+
+      fetch(FORM_URL, {
+        method: "POST",
+        body: formData,
+      }).then((response) => response.json());
+
+      setSubmitted(true);
+    }
+  };
 
   return (
     <section {...props} className={outerClasses}>
@@ -86,6 +110,8 @@ const Question = ({
                         Tên của Ba/Mẹ
                       </label>
                       <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="input-form"
                         id="questionName"
                         placeholder="Để tiện xưng hô"
@@ -107,13 +133,15 @@ const Question = ({
                         Số điện thoại
                       </label>
                       <input
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
                         className="input-form"
                         id="questionNumber"
                         placeholder="Để liên hệ nhanh nhất"
                       />
                     </div>
                     <Button
-                      onClick={() => setSubmitted(true)}
+                      onClick={onSubmit}
                       style={{
                         display: "flex",
                         alignItems: "center",

@@ -7,13 +7,14 @@ import Testimonial from "../components/sections/Testimonial";
 import Promotion from "../components/sections/Promotion";
 import Feedback from "../components/sections/Feedback";
 import Question from "../components/sections/Question";
-import Order from "../components/sections/Order";
+import Choices from "../components/sections/Choices";
 
 const Home = () => {
   return (
     <>
       <Hero className="illustration-section-01" />
       <FeaturesTiles />
+      <Choices />
       <FeaturesSplit
         invertMobile
         topDivider
