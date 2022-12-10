@@ -65,7 +65,7 @@ const Feedback = ({
               <div className="tiles-item-inner has-shadow">
                 <div className="testimonial-item-content">
                   <Image
-                    src={require("./../../assets/images/san-pham/feedback1.png")}
+                    src={require("./../../assets/images/san-pham/san-pham-1.png")}
                     alt="Features split 01"
                     width={"100%"}
                     height={"100%"}
@@ -85,7 +85,7 @@ const Feedback = ({
               <div className="tiles-item-inner has-shadow">
                 <div className="testimonial-item-content">
                   <Image
-                    src={require("./../../assets/images/san-pham/feedback2.png")}
+                    src={require("./../../assets/images/san-pham/san-pham-2.png")}
                     alt="Features split 02"
                     width={"100%"}
                     height={"100%"}
@@ -110,7 +110,7 @@ const Feedback = ({
               <div className="tiles-item-inner has-shadow">
                 <div className="testimonial-item-content">
                   <Image
-                    src={require("./../../assets/images/san-pham/feedback3.png")}
+                    src={require("./../../assets/images/san-pham/san-pham-3.png")}
                     alt="Features split 03"
                     width={"100%"}
                     height={"100%"}
