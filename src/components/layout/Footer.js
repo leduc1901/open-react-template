@@ -42,7 +42,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
               className="text-color-primary"
               style={{ marginTop: 16, fontWeight: 600, fontSize: 32 }}
             >
-              ROVIN Việt Nam
+              OHIRO Việt Nam
             </p>
             <div
               className="text-black"
@@ -104,18 +104,18 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
               <span>
                 <i aria-hidden="true" class="far fa-building"></i>{" "}
               </span>
-              <span>CÔNG TY TNHH SẢN XUẤT & THƯƠNG MẠI ROVIN VIỆT NAM</span>
+              <span>CÔNG TY TNHH SẢN XUẤT & THƯƠNG MẠI TÂN HOÀNG ANH</span>
             </div>
             <div
               className="text-black"
               style={{ fontSize: 16, textAlign: "left" }}
             >
-              <a href="https://zalo.me/0919223035">
+              <a href="https://zalo.me/0973878338">
                 <span class="elementor-icon-list-icon">
                   <i aria-hidden="true" class="fas fa-phone-volume"></i>{" "}
                 </span>
                 <span class="elementor-icon-list-text">
-                  Zalo: 0919.223.035 (Ưu tiên Sỉ, Đại Lý)
+                  Zalo: 0973878338 (Ưu tiên Sỉ, Đại Lý)
                 </span>
               </a>
             </div>
@@ -123,11 +123,11 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
               className="text-black"
               style={{ fontSize: 16, textAlign: "left" }}
             >
-              <a href="tel://0919223035">
+              <a href="tel://0973878338">
                 <span class="">
                   <i aria-hidden="true" class="fas fa-phone-volume"></i>{" "}
                 </span>
-                <span class="">Hotline: 0919.223.035</span>
+                <span class="">Hotline: 0973878338</span>
               </a>
             </div>
             <div
@@ -137,7 +137,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
               <span>
                 <i aria-hidden="true" class="fas fa-location-arrow"></i>{" "}
               </span>
-              <span>Email: lienhe@rovinvietnam.vn</span>
+              <span>Email: kinhdoanh@tanhoanganh.net</span>
             </div>
           </div>
         </div>

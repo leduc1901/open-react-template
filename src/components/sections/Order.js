@@ -5,6 +5,13 @@ import classNames from "classnames";
 import { SectionProps } from "../../utils/SectionProps";
 import Button from "../elements/Button";
 
+const FORM_URL =
+  "https://docs.google.com/forms/u/2/d/e/1FAIpQLSfiL1Zmk-kKhbLAzY_MhNKzfzDR2KfWXFlxqTIxLYTH_2zetg/formResponse";
+const NAME_ID = "entry.1841354206";
+const QUANTITY_ID = "entry.1533285241";
+const ADDRESS_ID = "entry.607556679";
+const PHONE_ID = "entry.1502948008";
+
 const propTypes = {
   ...SectionProps.types,
   split: PropTypes.bool,
@@ -43,6 +50,30 @@ const Order = ({
     bottomDivider && "has-bottom-divider",
     split && "cta-split"
   );
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [address, setAddress] = useState("");
+
+  const onSubmit = () => {
+    if (!name || !phone || !quantity || !address) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+    } else {
+      const formData = new FormData();
+      formData.append(NAME_ID, name);
+      formData.append(QUANTITY_ID, quantity);
+      formData.append(ADDRESS_ID, address);
+      formData.append(PHONE_ID, phone);
+
+      fetch(FORM_URL, {
+        method: "POST",
+        body: formData,
+      }).then((response) => response.json());
+
+      setSubmitted(true);
+    }
+  };
 
   return (
     <section {...props} className={outerClasses}>
@@ -87,6 +118,8 @@ const Order = ({
                         Tên của Ba/Mẹ
                       </label>
                       <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="input-form"
                         style={{ maxWidth: 800 }}
                         id="questionName"
@@ -109,6 +142,8 @@ const Order = ({
                         Số điện thoại
                       </label>
                       <input
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
                         className="input-form"
                         style={{ maxWidth: 800 }}
                         id="questionNumber"
@@ -131,6 +166,8 @@ const Order = ({
                         Số lượng mua
                       </label>
                       <input
+                        value={quantity}
+                        onChange={(e) => setQuantity(e.target.value)}
                         className="input-form"
                         style={{ maxWidth: 800 }}
                         id="questionNumber"
@@ -153,6 +190,8 @@ const Order = ({
                         Địa chỉ
                       </label>
                       <input
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
                         className="input-form"
                         style={{ maxWidth: 800 }}
                         id="questionNumber"
@@ -160,7 +199,7 @@ const Order = ({
                       />
                     </div>
                     <Button
-                      onClick={() => setSubmitted(true)}
+                      onClick={onSubmit}
                       style={{
                         display: "flex",
                         alignItems: "center",
